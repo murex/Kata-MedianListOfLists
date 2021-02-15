@@ -4,10 +4,9 @@
 namespace kata {
 namespace median_list_of_lists {
 
-// TODO Replace with a method more relevant for the kata
-int doSomething()
+float computeMedian(const List& values)
 {
-   return 42;
+   return 0;
 }
 
 } // namespace median_list_of_lists
