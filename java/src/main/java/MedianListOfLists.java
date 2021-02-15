@@ -1,7 +1,7 @@
-class MedianListOfLists {
+import java.util.List;
 
-    // TODO Replace with a method more relevant for the kata
-    static int doSomething() {
-        return 42;
+class MedianListOfLists {
+    static float computeMedian(List<List<Integer>> lists) {
+        return 0;
     }
 }
