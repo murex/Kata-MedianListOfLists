@@ -1,3 +1,5 @@
+package com.murex;
+
 import java.util.List;
 
 class MedianListOfLists {
