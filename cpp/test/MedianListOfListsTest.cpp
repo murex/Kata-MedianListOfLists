@@ -3,7 +3,7 @@
 
 #include <gtest/gtest.h>
 
-using namespace ::kata::median_list_of_lists;
+using namespace com::murex::kata::median_list_of_lists;
 
 TEST(MedianListOfLists, DISABLED_acceptance_test_with_odd_number_of_values)
 {
