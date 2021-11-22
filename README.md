@@ -8,6 +8,18 @@ Image by [Michael Dziedzic](https://unsplash.com/@lazycreekimages) on [Unsplash]
 Refer first to the [Problem Description Email](./doc/Email1-ProblemDescription.md),
 then to the [Solution Email](./doc/Email2-Solution.md) (⚠ Spoiler).
 
+## Getting Started
+
+### Running the kata using TCR
+
+- [Java](./java/GETTING_STARTED_TCR.md)
+- [C++](./cpp/GETTING_STARTED_TCR.md)
+
+### Running the kata using a standard approach
+
+- [Java](./java/GETTING_STARTED.md)
+- [C++](./cpp/GETTING_STARTED.md)
+
 ## Session Quick Retrospective
 
 You can fill it from [here](./QuickRetrospective.md)
@@ -21,7 +33,6 @@ You can fill it from [here](./QuickRetrospective.md)
 - [Another One](http://www.alcula.com/calculators/statistics/median/)
 
 ### General
-
 
 - [TCR (Test && Commit || Revert) wrapper](tcr/TCR.md) utility
 - Handy for any type of turn-based session: [Online Timer](https://agility.jahed.dev/)
@@ -49,9 +60,9 @@ You can fill it from [here](./QuickRetrospective.md)
 
 ## License
 
-The `Kata-MedianListOfLists` and the accompanying materials are made available
-under the terms of the MIT License ([here](LICENSE.md)) which accompanies this
-distribution, and is available at the Open Source site [here](https://opensource.org/licenses/MIT)
+`Kata-MedianListOfLists` and the accompanying materials are made available
+under the terms of the [MIT License](./LICENSE.md) which accompanies this
+distribution, and is available at the [Open Source site](https://opensource.org/licenses/MIT)
 
 ## Acknowledgements
 
