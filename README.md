@@ -5,24 +5,17 @@ Image by [Michael Dziedzic](https://unsplash.com/@lazycreekimages) on [Unsplash]
 
 ## Description
 
-Refer first to the [Problem Description Email](./doc/Email1-ProblemDescription.md),
-then to the [Solution Email](./doc/Email2-Solution.md) (⚠ Spoiler).
+Refer first to the [Problem Description Email](doc/Email1-ProblemDescription.md),
+then to the [Solution Email](doc/Email2-Solution.md) (⚠ Spoiler).
 
 ## Getting Started
 
-### Running the kata using TCR
-
-- [Java](./java/GETTING_STARTED_TCR.md)
-- [C++](./cpp/GETTING_STARTED_TCR.md)
-
-### Running the kata using a standard approach
-
-- [Java](./java/GETTING_STARTED.md)
-- [C++](./cpp/GETTING_STARTED.md)
+- [Java](java/GETTING_STARTED.md)
+- [C++](cpp/GETTING_STARTED.md)
 
 ## Session Quick Retrospective
 
-You can fill it from [here](./QuickRetrospective.md)
+You can fill it from [here](QuickRetrospective.md)
 
 ## Useful Links
 
@@ -41,7 +34,7 @@ You can fill it from [here](./QuickRetrospective.md)
 
 ### Style & Duration
 
-- 2-hour [Randori in Pairs](./doc/RandoriInPairs.md)
+- 2-hour [Randori in Pairs](doc/RandoriInPairs.md)
 
 ### Topic
 
@@ -55,18 +48,18 @@ You can fill it from [here](./QuickRetrospective.md)
 
 ### Source Files
 
-- [Java](./java)
-- [C++](./cpp)
+- [Java](java)
+- [C++](cpp)
 
 ## License
 
 `Kata-MedianListOfLists` and the accompanying materials are made available
-under the terms of the [MIT License](./LICENSE.md) which accompanies this
+under the terms of the [MIT License](LICENSE.md) which accompanies this
 distribution, and is available at the [Open Source site](https://opensource.org/licenses/MIT)
 
 ## Acknowledgements
 
-See [ACKNOWLEDGEMENTS.md](./ACKNOWLEDGEMENTS.md) for more information.
+See [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md) for more information.
 
 ## Contributors
 
