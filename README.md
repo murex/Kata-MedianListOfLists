@@ -1,7 +1,7 @@
 # Median of a List of Lists (with no concatenation)
 
 ![Kata Image](images/CPU.jpg) <br>
-Image by [Michael Dziedzic](https://unsplash.com/@lazycreekimages) on [Unsplash](https://images.unsplash.com/photo-1583115260445-f95fe37202ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=937&q=80)
+"[CPU Heat Sink](https://unsplash.com/photos/nLFqr9Mr9H8)" by [Michael Dziedzic](https://unsplash.com/@lazycreekimages) is licenced under [Unsplash License](https://unsplash.com/license)
 
 ## Description
 
