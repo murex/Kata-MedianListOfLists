@@ -16,8 +16,8 @@ then to the [Solution Email](doc/Email2-Solution.md) (⚠ Spoiler).
 
 ### Profiling
 
-Profiling is the process of analyzing the space and time complexity of your program. Profiling gives you 
-ability to optimize and improve the performance of your code.   
+Profiling is the process of analyzing the space and time complexity of your program. You can use code profiling 
+to optimize and improve the performance of your code.   
 
 For this kata, you can profile your code to improve your initial greedy solution! Therefore, do not
 attempt this step before writing the greedy solution.
@@ -46,10 +46,10 @@ To profile your code, follow the below steps:
 5. Improve your code and redo steps 3 & 4  
  
 #### C++ 
-For C++, we will be using the built-in ***Performance Profiler*** tool.
+For C++, we will be using the Visual Studio built-in ***Performance Profiler*** tool.
 
-Note that you need an executable file to proceed with this profiling step. Therefore, make sure to run the 
-application at least once before!
+Note that you need an executable file to proceed with this profiling step. Make sure to run the 
+application at least once before proceeding to the next steps!
 
 To profile your code, follow the below steps:
 
