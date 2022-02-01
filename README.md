@@ -11,10 +11,61 @@
 
 ## Description
 
-Refer first to the [Problem Description Email](doc/Email1-ProblemDescription.md),
-then to the [Solution Email](doc/Email2-Solution.md) (⚠ Spoiler).
+This kata focuses on practicing TDD with algorithms. 
 
-### Profiling
+TDD does not 'magically' generate non-trivial algorithms.
+
+Here is the process (roughly):
+
+1. Think about the algorithm that will solve your problem.
+2. Think of an order of tests that will allow you to build this algorithm incrementally.
+3. Use TDD to write a crude algorithm that solves your problem, and that can later be re-factored into our target algorithm.
+   This usually involves laying down the main blocks we will need,
+   while using very low performance algorithms as much as possible.
+4. With the tests in place, refactor the algorithm to what we want.
+
+We have a cluster of machines that each holds a very large list of integers.
+We want to get the median of all these numbers, but we cannot bring all the numbers on a single machine.
+
+The central question is: how to compute the median value of a list of lists without concatenating all the lists?
+(A Median value does not need to be an element of the list, and can be a float value even if the lists only contain integers).
+
+### Part 1 - Solving the Problem 
+
+The definition of a median is that there are as many values that are greater as values that are smaller.
+
+A simple way to find the median, is to search for a value that fits the definition by asking for the count
+of greater and smaller values to all lists, and then summing.
+
+Here is a starting skeleton of the algorithm, that leaves place for incremental optimizations:
+
+    List<List<int>> values = ...
+
+    isMedian = function(n) {
+        totalCountSmaller = sum(countSmaller(n, values[0]), countSmaller(n, values[1]), countSmaller(n, values[2]), ...)
+        totalCountGreater = sum(countGreater(n, values[0]), countGreater(n, values[1]), countGreater(n, values[2]), ...)
+        return totalCountSmaller == totalCountGreater
+    }
+
+    maxValue = max(max(values[0]), max(values[1]), max(values[2]), ...)
+    minValue = min(min(values[0]), min(values[1]), min(values[2]), ...)
+
+    return findByPredicateBetween(minValue, maxValue, isMedian)
+
+At first, we can implement all the bricks (min, max, findByPredicateBetween, countSmaller, countGreater)
+in a very basic brute force way.
+
+### Part 2 - Improving Solution with Profiling 
+
+The optimizations are:
+
+- Use a dichotomous search
+- Sort the lists to speed up max and min
+- Use a binary search for countSmaller and countGreater
+- Compute countSmaller and countGreater in the single call (remember the lists are supposed to be on a different machine)
+- Parallelize the computations happening on the different lists (BONUS: how to abstract this to keep the unit tests deterministic and single threaded?)
+
+
 
 Profiling is the process of analyzing the space and time complexity of your program. You can use code profiling 
 to optimize and improve the performance of your code.   
@@ -22,48 +73,8 @@ to optimize and improve the performance of your code.
 For this kata, you can profile your code to improve your initial greedy solution! Therefore, do not
 attempt this step before writing the greedy solution.
 
-#### Java
-For Java, we will be using ***VisualVM*** to profile the code. VisualVM is a lightweight profiling tool that 
-used to be packaged with JDK until JDK 9. Therefore, it would be better to download the latest version to benefit from 
-the new features.
-
-To profile your code, follow the below steps:
-
-1. Download [VisualVM](https://visualvm.github.io/download.html)
-2. Start VisualVM by running the following command:
-
-   ``visualvm\bin\visualvm.exe --jdkhome "<path to JDK>"``
-3. Run your benchmark test:
-   1. Gradle: ``gradlew test --tests "<TestClassName>"``
-   2. Maven: ``mvnw -Dtest="<TestClassName>" test ``
-4. From VisualVM:
-   1. Expand the ``Local`` group under the  ``Applications`` window
-   2. Right click on ``org.openjdk.jmh.runner.ForkedMain``
-   3. Select ``Sample ``, this should open a dedicated tab dedicated to this process 
-   4. Click on ``CPU`` button
-   5. Under the ``CPU Samples`` tab, you should see a thread associated to the test or main class you are running. 
-   6. Expand that thread and play analyze where most of the time is consumed 
-5. Improve your code and redo steps 3 & 4  
- 
-#### C++ 
-For C++, we will be using the Visual Studio built-in ***Performance Profiler*** tool.
-
-Note that you need an executable file to proceed with this profiling step. Make sure to run the 
-application at least once before proceeding to the next steps!
-
-To profile your code, follow the below steps:
-
-1. Go to ``Analyze`` > ``Performance Profiler...``
-2. Click on the ``Start`` button. This should open the window ``Performance Wizard``
-3. Choose the ``Instrumentation`` option then click ``Next``
-4. Choose the ``An executable (.EXE file)`` option then click ``Next``
-5. From ``What is the full path to the executable?``, select the .exe file associated with this kata. 
-   It should be under [cpp\build\bin\Debug](cpp/build/bin/Debug).
-6. Click ``Next``
-7. Make sure the box ``Launch profiling after the wizard finishes`` is checked
-8. Click on ``Finish``
-9. Once the report is finalized, you can go to the ``Call Tree`` view to analyze the time consumed by each function.
-10. Improve your code and redo steps 1 to 8
+- [Java](java/PROFILING.md)
+- [C++](cpp/PROFILING.md)
 
 ## Getting Started
 

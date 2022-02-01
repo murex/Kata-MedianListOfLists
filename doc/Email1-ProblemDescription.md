@@ -11,7 +11,7 @@ You can use it to validate that your algorithm works, and then use the tests to 
 Here is the process (roughly):
 
 1. Think about the algorithm that will solve your problem.
-2. Think of an order of tests that will allow your to build this algorithm incrementally.
+2. Think of an order of tests that will allow you to build this algorithm incrementally.
 3. Use TDD to write a crude algorithm that solves your problem, and that can later be re-factored into our target algorithm.
 This usually involves laying down the main blocks we will need,
 while using very low performance algorithms as much as possible.
