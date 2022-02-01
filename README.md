@@ -14,6 +14,57 @@
 Refer first to the [Problem Description Email](doc/Email1-ProblemDescription.md),
 then to the [Solution Email](doc/Email2-Solution.md) (⚠ Spoiler).
 
+### Profiling
+
+Profiling is the process of analyzing the space and time complexity of your program. Profiling gives you 
+ability to optimize and improve the performance of your code.   
+
+For this kata, you can profile your code to improve your initial greedy solution! Therefore, do not
+attempt this step before writing the greedy solution.
+
+#### Java
+For Java, we will be using ***VisualVM*** to profile the code. VisualVM is a lightweight profiling tool that 
+used to be packaged with JDK until JDK 9. Therefore, it would be better to download the latest version to benefit from 
+the new features.
+
+To profile your code, follow the below steps:
+
+1. Download [VisualVM](https://visualvm.github.io/download.html)
+2. Start VisualVM by running the following command:
+
+   ``visualvm\bin\visualvm.exe --jdkhome "<path to JDK>"``
+3. Run your benchmark test:
+   1. Gradle: ``gradlew test --tests "<TestClassName>"``
+   2. Maven: ``mvnw -Dtest="<TestClassName>" test ``
+4. From VisualVM:
+   1. Expand the ``Local`` group under the  ``Applications`` window
+   2. Right click on ``org.openjdk.jmh.runner.ForkedMain``
+   3. Select ``Sample ``, this should open a dedicated tab dedicated to this process 
+   4. Click on ``CPU`` button
+   5. Under the ``CPU Samples`` tab, you should see a thread associated to the test or main class you are running. 
+   6. Expand that thread and play analyze where most of the time is consumed 
+5. Improve your code and redo steps 3 & 4  
+ 
+#### C++ 
+For C++, we will be using the built-in ***Performance Profiler*** tool.
+
+Note that you need an executable file to proceed with this profiling step. Therefore, make sure to run the 
+application at least once before!
+
+To profile your code, follow the below steps:
+
+1. Go to ``Analyze`` > ``Performance Profiler...``
+2. Click on the ``Start`` button. This should open the window ``Performance Wizard``
+3. Choose the ``Instrumentation`` option then click ``Next``
+4. Choose the ``An executable (.EXE file)`` option then click ``Next``
+5. From ``What is the full path to the executable?``, select the .exe file associated with this kata. 
+   It should be under [cpp\build\bin\Debug](cpp/build/bin/Debug).
+6. Click ``Next``
+7. Make sure the box ``Launch profiling after the wizard finishes`` is checked
+8. Click on ``Finish``
+9. Once the report is finalized, you can go to the ``Call Tree`` view to analyze the time consumed by each function.
+10. Improve your code and redo steps 1 to 8
+
 ## Getting Started
 
 - [Java](java/GETTING_STARTED.md)
