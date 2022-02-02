@@ -15,6 +15,8 @@ This kata focuses on practicing TDD with algorithms.
 
 TDD does not 'magically' generate non-trivial algorithms.
 
+TDD can help in a different way though. You can use it to validate that your algorithm works, and then use the tests to refactor your algorithm. 
+
 Here is the process (roughly):
 
 1. Think about the algorithm that will solve your problem.
@@ -24,13 +26,17 @@ Here is the process (roughly):
    while using very low performance algorithms as much as possible.
 4. With the tests in place, refactor the algorithm to what we want.
 
+### Part 1 - Solving the Problem 
+
+#### Problem Description 
+
 We have a cluster of machines that each holds a very large list of integers.
 We want to get the median of all these numbers, but we cannot bring all the numbers on a single machine.
 
 The central question is: how to compute the median value of a list of lists without concatenating all the lists?
 (A Median value does not need to be an element of the list, and can be a float value even if the lists only contain integers).
 
-### Part 1 - Solving the Problem 
+#### Possible Solution
 
 The definition of a median is that there are as many values that are greater as values that are smaller.
 
@@ -55,26 +61,38 @@ Here is a starting skeleton of the algorithm, that leaves place for incremental 
 At first, we can implement all the bricks (min, max, findByPredicateBetween, countSmaller, countGreater)
 in a very basic brute force way.
 
-### Part 2 - Improving Solution with Profiling 
+### Part 2 - Code Optimization
 
-The optimizations are:
+The current solution is working, but it is slow! 
+Your task now is to reach a faster solution! Therefore, do not attempt this step before completing part 1 (with a greedy solution).
+
+For this, we will be using two techniques:   
+1. Big(O) analysis of each function 
+2. Code profiling: For this technique, you rely on tools to help you analyze the space and time complexity of your program. 
+Refer to the below pages for more details:  
+   - [Java](java/PROFILING.md)
+   - [C++](cpp/PROFILING.md)
+
+
+#### Detailed Steps 
+
+Here are the steps we suggest you follow:
+1. Introduce a benchmark test
+2. Do a big(O) analysis. For each function, compute the Big(O) (comment the result at the top of the function)
+3. Run the profiler and compare the result to the results you got from the previous step.
+4. Based on the analysis you've done in previous steps, think of optimizations you can do 
+5. Apply the optimizations 
+6. Re-run the profiler and analyze the output. Was there any improvement in time? 
+7. Plan further possible optimization (if any)
+8. Repeat steps 4-7 
+
+#### Possible Optimizations
 
 - Use a dichotomous search
 - Sort the lists to speed up max and min
 - Use a binary search for countSmaller and countGreater
 - Compute countSmaller and countGreater in the single call (remember the lists are supposed to be on a different machine)
 - Parallelize the computations happening on the different lists (BONUS: how to abstract this to keep the unit tests deterministic and single threaded?)
-
-
-
-Profiling is the process of analyzing the space and time complexity of your program. You can use code profiling 
-to optimize and improve the performance of your code.   
-
-For this kata, you can profile your code to improve your initial greedy solution! Therefore, do not
-attempt this step before writing the greedy solution.
-
-- [Java](java/PROFILING.md)
-- [C++](cpp/PROFILING.md)
 
 ## Getting Started
 
