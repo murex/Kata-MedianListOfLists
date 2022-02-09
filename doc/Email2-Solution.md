@@ -30,7 +30,7 @@ The optimizations we can later do are:
 - Use a dichotomous search
 - Sort the lists to speed up max and min
 - Use a binary search for countSmaller and countGreater
-- Compute countSmaller and countGreater in the single call (remember the lists are supposed to be on a different machine)
+- Compute countSmaller and countGreater in a single call (remember the lists are supposed to be on a different machine)
 - Parallelize the computations happening on the different lists (BONUS: how to abstract this to keep the unit tests deterministic and single threaded?)
 
 During the dojo, the first step will be to pick the tests in the right order to quickly reach a working
