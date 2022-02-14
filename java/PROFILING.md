@@ -11,8 +11,8 @@ To profile your code, follow the below steps:
 
    ``visualvm\bin\visualvm.exe --jdkhome "<path to JDK>"``
 3. Run your benchmark test:
-    1. Gradle: ``gradlew test --tests "<TestClassName>"``
-    2. Maven: ``mvnw -Dtest="<TestClassName>" test ``
+    1. Gradle: ``./gradlew clean test --tests BenchmarkTest``
+    2. Maven: ``./mvnw clean test -Dtest=BenchmarkTest ``
 4. From VisualVM:
     1. Expand the ``Local`` group under the  ``Applications`` window
     2. Right click on ``org.openjdk.jmh.runner.ForkedMain``
