@@ -59,6 +59,7 @@ add_executable(Kata-MedianListOfLists-test)
 target_sources(Kata-MedianListOfLists-test
     PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/test/MedianListOfListsTest.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/test/BenchmarkTest.cpp
 )
 
 target_link_libraries(Kata-MedianListOfLists-test
@@ -72,6 +73,7 @@ add_custom_target(Docs
     SOURCES
         ../README.md
         ./GETTING_STARTED.md
+        ./PROFILING.md
         ../QuickRetrospective.md)
 
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT Kata-MedianListOfLists-test)
