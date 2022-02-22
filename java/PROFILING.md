@@ -6,18 +6,19 @@ the new features.
 
 To profile your code, follow the below steps:
 
-1. Download [VisualVM](https://visualvm.github.io/download.html)
-2. Start VisualVM by running the following command:
+1. Make sure to enable the benchmark test case in [BenchmarkTest.java](./src/test/java/com/murex/BenchmarkTest.java)
+2. Download [VisualVM](https://visualvm.github.io/download.html)
+3. Start VisualVM by running the following command:
 
    ``visualvm\bin\visualvm.exe --jdkhome "<path to JDK>"``
-3. Run your benchmark test:
+4. Run your benchmark test:
     1. Gradle: ``./gradlew clean test --tests BenchmarkTest``
     2. Maven: ``./mvnw clean test -Dtest=BenchmarkTest ``
-4. From VisualVM:
+5. From VisualVM:
     1. Expand the ``Local`` group under the  ``Applications`` window
     2. Right click on ``org.openjdk.jmh.runner.ForkedMain``
     3. Select ``Sample ``, this should open a dedicated tab dedicated to this process
     4. Click on ``CPU`` button
     5. Under the ``CPU Samples`` tab, you should see a thread associated to the test or main class you are running.
     6. Expand that thread and play analyze where most of the time is consumed
-5. Improve your code and redo steps 3 & 4  
+6. Improve your code and redo steps 4 & 5  

@@ -1,5 +1,6 @@
 package com.murex;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.runner.Runner;
@@ -58,6 +59,7 @@ public class BenchmarkTest {
     }
 
 
+    @Ignore
     @Test
     public void benchmarkTestExecutor() throws RunnerException {
         Options opt = new OptionsBuilder()
