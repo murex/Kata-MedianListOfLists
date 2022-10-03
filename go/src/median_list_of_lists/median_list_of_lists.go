@@ -22,6 +22,6 @@ SOFTWARE.
 
 package median_list_of_lists
 
-func doSomething() int {
-	return 42
+func computeMedian(values [][]int) float64 {
+	return 0
 }

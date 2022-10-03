@@ -28,5 +28,49 @@ import (
 )
 
 func Test_acceptance_test(t *testing.T) {
-	assert.Equal(t, 42, doSomething())
+	t.Skip("test currently disabled") // Comment or remove this line to enable this test case
+
+	tests := []struct {
+		name     string
+		values   [][]int
+		expected float64
+		delta    float64
+	}{
+		{
+			"with odd number of values",
+			[][]int{
+				{1, 42, 7, 49, 18, 97},
+				{24, 1, 12, 82, 33, 40, 73, 56, 57},
+				{46, 68, 2, 72},
+			},
+			42,
+			0,
+		},
+		{
+			"with even number of values",
+			[][]int{
+				{1, 7, 49, 18, 97},
+				{24, 1, 12, 82, 33, 41, 73, 56, 57},
+				{43, 68, 2, 72},
+			},
+			42,
+			0,
+		},
+		{
+			"with non-integer median",
+			[][]int{
+				{1, 7, 49, 18, 97},
+				{24, 1, 12, 82, 33, 41, 73, 56, 57},
+				{44, 68, 2, 72},
+			},
+			42.5,
+			0,
+		},
+	}
+
+	for _, test := range tests {
+		t.Run(test.name, func(t *testing.T) {
+			assert.InDelta(t, test.expected, computeMedian(test.values), test.delta)
+		})
+	}
 }
