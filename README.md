@@ -73,6 +73,7 @@ For this, we will be using two techniques:
 Refer to the below pages for more details:  
    - [Java](java/PROFILING.md)
    - [C++](cpp/PROFILING.md)
+   - [Go](go/PROFILING.md)
 
 
 #### Detailed Steps 
