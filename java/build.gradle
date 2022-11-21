@@ -19,7 +19,7 @@ dependencies {
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
 
     // Java Microbenchmark Harness
-    testImplementation group: 'org.openjdk.jmh', name: 'jmh-core', version: '1.35'
+    testImplementation group: 'org.openjdk.jmh', name: 'jmh-core', version: '1.36'
     testAnnotationProcessor group: 'org.openjdk.jmh', name: 'jmh-generator-annprocess', version: '1.35'
 }
 
