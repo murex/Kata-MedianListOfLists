@@ -14,14 +14,17 @@
 # Go folders containing generated stuff
 **/_test_results/
 
-# Profiling data files and generated exe files
-*.prof
-*.exe
-
 # C# folders containing generated stuff
 **/csharp/**/bin/
 **/csharp/**/obj/
 **/csharp/**/TestResults/
+
+# Python folders containing generated stuff
+**/venv/
+**/dist/
+**/.pytest_cache/
+**/pytest/
+**/*.egg-info/
 
 # ApprovalTests - generated golden master files
 GoldenMasterTest.*.txt
