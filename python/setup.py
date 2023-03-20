@@ -24,7 +24,7 @@ setup(
     name='median_list_of_lists',
     version='0.0.1',
     python_requires='>=3.6',
-    extras_require=dict(tests=['pytest']),
+    extras_require=dict(tests=['pytest', 'yappi']),
     packages=find_packages(where="src"),
     package_dir={"": "src"},
 )
