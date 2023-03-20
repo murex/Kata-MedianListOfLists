@@ -1,46 +1,52 @@
 # Profiling Python Code
 
-# TODO
 
 You can refer to the 2 following links:
-- [How to write benchmarks in Go](https://dave.cheney.net/2013/06/30/how-to-write-benchmarks-in-go)
-- [pprof documentation](https://github.com/google/pprof/tree/main/doc)
+- [Yappi profiler](https://github.com/sumerc/yappi#readme)
+- [Snakeviz (browser-based profile graphical viewer)](https://jiffyclub.github.io/snakeviz/#snakeviz)
 
-We will leverage on Go language's built-in tools for generating benchmarks.
-
-We will then use  [pprof](https://github.com/google/pprof) to profile the code.
-
-## 1 - Install `pprof` tool
+## 1 - Open a terminal and go to the kata's `python` directory
 
 ```shell
-go install github.com/google/pprof@latest
+cd Kata-MedianListOfLists/python
 ```
 
-## 2 - Run the provided benchmark
+## 2 - Start the python virtual environment
 
-The code used to run the benchmark is available [here](src/median_list_of_lists/benchmark_test.go)
+Although not mandatory, we recommend running profiling commands in a virtual environment in order
+to prevent interferences with other python projects that you may have on your machine.
+
+This also ensures that the module dependencies used for profiling are satisfied.
+
+To create and start the python virtual environment:
 
 ```shell
-go test -v -benchmem -cpuprofile cpu.prof -bench=. ./...
+./start_python_venv.sh
 ```
 
-## 3 - Launch the profiler (web interface)
+## 3 - Run the provided benchmark
+
+The code used to run the benchmark is available [here](tests/median_list_of_lists_benchmark.py)
 
 ```shell
-pprof -http=localhost:5000 cpu.prof
+python tests/median_list_of_lists_benchmark.py
 ```
 
-This command starts a web server listening on `http=localhost:5000`
+This command saves the profiling data into a file called `median_list_of_lists.prof`
 
-Feel free to use a different port number.
+## 4 - Browse and analyze profiling data (web interface)
 
-## 4 - Browse and analyze profiling data
+Although the previous command displays benchmark results in the terminal trace,
+`snakeviz` utility provides a more user-friendly way to browse and navigate the results.
 
-Open `http=localhost:5000` in a browser and go through execution details
-to identify parts of the code to optimize.
+```shell
+snakeviz median_list_of_lists.prof
+```
 
-You can use pprof's `VIEW` menu to choose which view to display.
+This command starts a web server listening on `http=localhost:8080`
+
+Feel free to use a different port number through adding the option `-p <port_number>` to the command
 
 ## 5 - Improve your code and repeat
 
-Once you have a new improved version ot the code, restart from step 2.
+Once you have a new improved version ot the code, restart from step 3.
