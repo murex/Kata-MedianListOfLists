@@ -75,7 +75,7 @@ Refer to the below pages for more details:
    - [Java](java/PROFILING.md)
    - [C++](cpp/PROFILING.md)
    - [Go](go/PROFILING.md)
-
+   - [Python](python/PROFILING.md)
 
 #### Detailed Steps 
 
