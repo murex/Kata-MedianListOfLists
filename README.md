@@ -76,6 +76,7 @@ Refer to the below pages for more details:
    - [C++](cpp/PROFILING.md)
    - [Go](go/PROFILING.md)
    - [Python](python/PROFILING.md)
+   - [Typescript](typescript/PROFILING.md)
 
 #### Detailed Steps 
 
@@ -103,6 +104,7 @@ Here are the steps we suggest you follow:
 - [C++](cpp/GETTING_STARTED.md)
 - [Go](go/GETTING_STARTED.md)
 - [Python](python/GETTING_STARTED.md)
+- [Typescript](typescript/GETTING_STARTED.md)
 
 ## Session Quick Retrospective
 
@@ -145,6 +147,7 @@ You can fill it from [here](QuickRetrospective.md)
 - [C++](cpp)
 - [Go](go)
 - [Python](python)
+- [Typescript](typescript)
 
 ## License
 

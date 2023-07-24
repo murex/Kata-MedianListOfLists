@@ -14,14 +14,14 @@
 # Go folders containing generated stuff
 **/_test_results/
 
-# Profiling data files and generated exe files
-*.prof
-*.exe
-
 # C# folders containing generated stuff
 **/csharp/**/bin/
 **/csharp/**/obj/
 **/csharp/**/TestResults/
+
+# Typescript folders containing generated stuff
+**/node_modules/
+**/test_results/
 
 # Python folders containing generated stuff
 **/venv/
