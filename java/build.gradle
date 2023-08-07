@@ -20,8 +20,8 @@ dependencies {
     testImplementation('org.junit.jupiter:junit-jupiter')
 
     // Java Microbenchmark Harness
-    testImplementation group: 'org.openjdk.jmh', name: 'jmh-core', version: '1.36'
-    testAnnotationProcessor group: 'org.openjdk.jmh', name: 'jmh-generator-annprocess', version: '1.36'
+    testImplementation group: 'org.openjdk.jmh', name: 'jmh-core', version: '1.37'
+    testAnnotationProcessor group: 'org.openjdk.jmh', name: 'jmh-generator-annprocess', version: '1.37'
 }
 
 test {
