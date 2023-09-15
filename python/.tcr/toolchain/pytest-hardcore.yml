@@ -10,3 +10,4 @@ test:
     command: pytest
     arguments: [ ]
 test-result-dir: pytest
+
