@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'java-library'
-    id 'com.adarshr.test-logger' version '3.2.0'
+    id 'com.adarshr.test-logger' version '4.0.0'
 }
 
 java {
@@ -16,8 +16,8 @@ repositories {
 
 dependencies {
     // JUnit 5
-    testImplementation(platform('org.junit:junit-bom:5.10.0'))
-    testImplementation('org.junit.jupiter:junit-jupiter')
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
     // Java Microbenchmark Harness
     testImplementation group: 'org.openjdk.jmh', name: 'jmh-core', version: '1.37'
