@@ -6,4 +6,5 @@ mypy == 0.971; python_version < '3.7'
 mypy == 1.4.1; python_version in '3.7'
 mypy == 1.13.0; python_version >= '3.8'
 yappi == 1.6.10
-snakeviz == 2.2.2
+snakeviz == 2.2.1; python_version < '3.9'
+snakeviz == 2.2.2; python_version >= '3.9'
